@@ -4,10 +4,8 @@
   "description": "Master course GraphQL server",
   "main": "server.js",
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
-    "build": "npm run clean && npm run build-babel",
-    "build-babel": "babel -d ./build ./src -s",
-    "start": "npm run build && node ./build/server.js"
+    "start": "npm run server",
+    "server": "nodemon --exec babel-node server.js"
   },
   "keywords": [
     "express",
