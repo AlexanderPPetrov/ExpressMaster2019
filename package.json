@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run server",
-    "server": "nodemon --exec babel-node server/index.js"
+    "server": "nodemon --exec babel-node server.js"
   },
   "keywords": [
     "graphql",
