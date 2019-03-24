@@ -20,7 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 require("dotenv").config();
 
 var app = (0, _express.default)();
-var PORT = process.env.PORT || "4000";
+var PORT = process.env.PORT || "3000";
 var db = process.env.MONGODB_URI; // Connect to MongoDB with Mongoose.
 
 _mongoose.default.connect(db, {

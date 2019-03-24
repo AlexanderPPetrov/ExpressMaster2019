@@ -9,14 +9,14 @@ export default {
     Query: {
         game: (root, args) => {
             return new Promise((resolve, reject) => {
-                User.findOne(args).exec((err, res) => {
+                Game.findOne(args).exec((err, res) => {
                     err ? reject(err) : resolve(res);
                 });
             });
         },
         games: () => {
             return new Promise((resolve, reject) => {
-                User.find({})
+                Game.find({})
                     .populate()
                     .exec((err, res) => {
                         err ? reject(err) : resolve(res);

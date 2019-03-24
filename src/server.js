@@ -13,7 +13,7 @@ import cors from "cors";
 import schema from "./graphql";
 
 const app = express();
-const PORT = process.env.PORT || "4000";
+const PORT = process.env.PORT || "3000";
 const db = process.env.MONGODB_URI;
 
 // Connect to MongoDB with Mongoose.

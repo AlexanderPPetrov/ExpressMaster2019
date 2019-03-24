@@ -7,7 +7,8 @@
     "clean": "rm -rf build && mkdir build",
     "build": "npm run clean && npm run build-babel",
     "build-babel": "babel -d ./build ./src -s",
-    "start": "npm run build && node ./build/server.js"
+    "start": "npm run build && node ./build/server.js",
+    "server": "nodemon --exec babel-node ./src/server.js"
   },
   "keywords": [
     "express",
