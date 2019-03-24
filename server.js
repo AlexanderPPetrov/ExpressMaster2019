@@ -1,6 +1,9 @@
 /**
  * Created by alexanderpetrov on 24.03.19.
  */
+
+require("dotenv").config();
+
 import express from "express";
 import expressGraphQL from "express-graphql";
 import mongoose from "mongoose";
@@ -11,7 +14,7 @@ import schema from "./graphql";
 
 const app = express();
 const PORT = process.env.PORT || "4000";
-const db = "mongodb+srv://staynoobie:martobat1@cluster0-ruepg.mongodb.net/test?retryWrites=true";
+const db = process.env.MONGODB_URI;
 
 // Connect to MongoDB with Mongoose.
 mongoose

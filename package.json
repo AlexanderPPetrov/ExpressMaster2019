@@ -4,10 +4,11 @@
   "description": "Master course GraphQL server",
   "main": "index.js",
   "scripts": {
-    "start": "npm run server",
+    "start": "node server.js",
     "server": "nodemon --exec babel-node server.js"
   },
   "keywords": [
+    "express",
     "graphql",
     "mongodb",
     "boilerplate",
@@ -45,8 +46,10 @@
     "react-testing-library": "^5.2.3"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "dotenv": "^6.1.0",
+    "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "graphql-subscriptions": "^1.0.0",
