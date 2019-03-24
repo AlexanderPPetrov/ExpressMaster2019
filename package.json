@@ -2,7 +2,7 @@
   "name": "express-graphql-server",
   "version": "1.0.0",
   "description": "Master course GraphQL server",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "npm run server",
     "server": "nodemon --exec babel-node server.js"
