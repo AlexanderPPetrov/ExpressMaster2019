@@ -4,7 +4,7 @@
   "description": "Master course GraphQL server",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run server",
     "server": "nodemon --exec babel-node server.js"
   },
   "keywords": [
