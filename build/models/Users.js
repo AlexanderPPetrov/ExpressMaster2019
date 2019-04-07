@@ -12,16 +12,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Schema = _mongoose.default.Schema; // Create the User Schema.
 
 var UserSchema = new Schema({
-  id: {
-    type: String,
-    required: true,
-    unique: true
-  },
   name: {
     type: String,
     required: true
   },
   email: {
+    type: String,
+    required: true
+  },
+  password: {
     type: String,
     required: true
   }

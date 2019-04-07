@@ -3,7 +3,7 @@
  */
 
 // Game schema.
-import Game from "../../../models/Games";
+import Game from "../../../models/Game";
 
 export default {
     Query: {

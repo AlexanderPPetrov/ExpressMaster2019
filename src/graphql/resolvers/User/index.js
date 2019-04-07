@@ -3,7 +3,7 @@
  */
 
 // User schema.
-import User from "../../../models/Users";
+import User from "../../../models/User";
 
 export default {
     Query: {
@@ -25,8 +25,8 @@ export default {
         }
     },
     Mutation: {
-        addUser: (root, {id, name, email}) => {
-            const newUser = new User({id, name, email});
+        addUser: (root, {username, email, password}) => {
+            const newUser = new User({ username, email, password});
 
             return new Promise((resolve, reject) => {
                 newUser.save((err, res) => {
@@ -34,9 +34,9 @@ export default {
                 });
             });
         },
-        editUser: (root, {id, name, email}) => {
+        editUser: (root, {_id, username, email, password}) => {
             return new Promise((resolve, reject) => {
-                User.findOneAndUpdate({id}, {$set: {name, email}}).exec(
+                User.findOneAndUpdate({_id}, {$set: {username, email, password}}).exec(
                     (err, res) => {
                         err ? reject(err) : resolve(res);
                     }

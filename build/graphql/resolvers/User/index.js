@@ -32,13 +32,13 @@ var _default = {
   },
   Mutation: {
     addUser: function addUser(root, _ref) {
-      var id = _ref.id,
-          name = _ref.name,
-          email = _ref.email;
+      var name = _ref.name,
+          email = _ref.email,
+          password = _ref.password;
       var newUser = new _Users.default({
-        id: id,
         name: name,
-        email: email
+        email: email,
+        password: password
       });
       return new Promise(function (resolve, reject) {
         newUser.save(function (err, res) {
@@ -47,16 +47,17 @@ var _default = {
       });
     },
     editUser: function editUser(root, _ref2) {
-      var id = _ref2.id,
-          name = _ref2.name,
-          email = _ref2.email;
+      var name = _ref2.name,
+          email = _ref2.email,
+          password = _ref2.password;
       return new Promise(function (resolve, reject) {
         _Users.default.findOneAndUpdate({
           id: id
         }, {
           $set: {
             name: name,
-            email: email
+            email: email,
+            password: password
           }
         }).exec(function (err, res) {
           err ? reject(err) : resolve(res);

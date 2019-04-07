@@ -17,14 +17,14 @@ var _default = {
   Query: {
     game: function game(root, args) {
       return new Promise(function (resolve, reject) {
-        User.findOne(args).exec(function (err, res) {
+        _Games.default.findOne(args).exec(function (err, res) {
           err ? reject(err) : resolve(res);
         });
       });
     },
     games: function games() {
       return new Promise(function (resolve, reject) {
-        User.find({}).populate().exec(function (err, res) {
+        _Games.default.find({}).populate().exec(function (err, res) {
           err ? reject(err) : resolve(res);
         });
       });
